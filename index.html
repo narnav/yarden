@@ -1,1 +1,23 @@
-Yarden
+<html lang="en">
+  <body id="body">
+    <button onclick="callToPage('green')">green</button>
+    <button onclick="callToPage('yellow')">yellow</button>
+    <a href="showColors.html?color=blue">Red</a>
+    <a href="URL.html?color=blue">Blue</a>
+
+    <script>
+      const queryString = window.location.search; // parameters as string
+
+      const urlParams = new URLSearchParams(queryString); //convert the string to array
+
+      const _Param = urlParams.get("color"); // get single param from the array
+      body.style.backgroundColor = _Param;
+
+      function callToPage(colorName) {
+        // console.log("test" + colorName);
+        window.location.assign("URL.html?color=" + colorName);
+        // document.body.style.backgroundColor = colorName;
+      }
+    </script>
+  </body>
+</html>

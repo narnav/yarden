@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+  <body id="body">
+    <script>
+      const queryString = window.location.search;
+
+      const urlParams = new URLSearchParams(queryString);
+
+      const _Param = urlParams.get("color");
+      body.style.backgroundColor = _Param;
+    </script>
+  </body>
+</html>
